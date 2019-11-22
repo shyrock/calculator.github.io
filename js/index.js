@@ -172,7 +172,7 @@ function getResult (fir, sec, cur) {
 		switch(cur) {
             case '+': return (fir + sec);
             case '-': return (fir - sec);
-            case '*': return (fir * sec);
+            case 'x': return (fir * sec);
             case '÷': return fir + '/' + sec;
             default: return 1;
 	    }
@@ -182,7 +182,7 @@ function getResult (fir, sec, cur) {
         switch(cur) {
             case '+': return ( Number(sonPare[1]) * Number(sec) + Number(sonPare[0]) ) + '/' + Number(sonPare[1]);
             case '-': return ( Number(sonPare[0]) - Number(sonPare[1]) * Number(sec) ) + '/' + Number(sonPare[1]);
-            case '*': return ( Number(sonPare[0]) * Number(sec) ) + '/' + Number(sonPare[1]);
+            case 'x': return ( Number(sonPare[0]) * Number(sec) ) + '/' + Number(sonPare[1]);
             case '÷': return Number(sonPare[0]) + '/' + ( Number(sonPare[1]) * Number(sec) );
             default: return 1;
 	    }
@@ -193,7 +193,7 @@ function getResult (fir, sec, cur) {
         switch(cur) {
             case '+': return Number(sonPare[1]) * Number(fir) + Number(sonPare[0]) + '/' + Number(sonPare[1]);
             case '-': return ( Number(sonPare[1]) * Number(fir) - Number(sonPare[0]) ) + '/' + Number(sonPare[1]);
-            case '*': return ( Number(sonPare[0]) * Number(fir) ) + '/' + Number(sonPare[1]);
+            case 'x': return ( Number(sonPare[0]) * Number(fir) ) + '/' + Number(sonPare[1]);
             case '÷': return ( Number(sonPare[1]) * Number(fir) ) + '/' + Number(sonPare[0]);
             default: return 1;
 	    }
@@ -204,7 +204,7 @@ function getResult (fir, sec, cur) {
         switch(cur) {
             case '+': return ( Number(sonPare2[1]) * Number(sonPare1[0]) + Number(sonPare2[0]) * Number(sonPare1[1]) ) + '/' + (Number( sonPare1[1]) * Number(sonPare2[1]) );
             case '-': return ( Number(sonPare1[0]) * Number(sonPare2[1]) - Number(sonPare2[0]) * Number(sonPare1[1]) ) + '/' + (Number( sonPare1[1]) * Number(sonPare2[1]) );
-            case '*': return ( Number(sonPare1[0]) * Number(sonPare2[0]) ) + '/' + ( Number(sonPare1[1]) * Number(sonPare2[1]) );
+            case 'x': return ( Number(sonPare1[0]) * Number(sonPare2[0]) ) + '/' + ( Number(sonPare1[1]) * Number(sonPare2[1]) );
             case '÷': return ( Number(sonPare1[0]) * Number(sonPare2[1]) ) + '/' + ( Number(sonPare1[1]) * Number(sonPare2[0]) );
             default: return 1;
 	    }
@@ -213,7 +213,7 @@ function getResult (fir, sec, cur) {
 
 // 调度场算法实现函数
 function isOperator(value){
-    var operatorString = "+-*÷()";
+    var operatorString = "+-x÷()";
     return operatorString.indexOf(value) > -1
 }
  
@@ -222,7 +222,7 @@ function getPrioraty(value){
         case '+':
         case '-':
             return 1;
-        case '*':
+        case 'x':
         case '÷':
             return 2;
         default:
