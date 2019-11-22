@@ -111,24 +111,14 @@ function createProblem () {
         case 1:{
             var a = [];
             for(var i = 0; i < 2; i++) {
-                var f = GetRandomNum(1, 7);
-                if(f%4 != 0) {
-                    a[i] = GetRandomNum(1, MAX_NUM);
-                } else {
-                    a[i] = GetRandomNum(1, MAX_NUM) + '/' + GetRandomNum(1,MAX_NUM);
-                }
+                a[i] = GetRandomNum(1, MAX_NUM);
             }
             return a[0] + Arr[n] + a[1];
         }
         case 2:{
             var a = [];
             for(var i = 0; i < 3; i++) {
-                var f = GetRandomNum(1, 7);
-                if(f%4 != 0) {
                     a[i] = GetRandomNum(1,MAX_NUM);
-                } else {
-                    a[i] = GetRandomNum(1,MAX_NUM) + '/' + GetRandomNum(1,MAX_NUM);
-                }
             }
             var m = GetRandomNum(1, 2);
             if (m == 1) {
@@ -140,12 +130,7 @@ function createProblem () {
         case 3:{
             var a = [];
             for(var i = 0; i < 4; i++) {
-                var f = GetRandomNum(1, 7);
-                if(f%4 != 0) {
                     a[i] = GetRandomNum(1,MAX_NUM);
-                } else {
-                    a[i] = GetRandomNum(1,MAX_NUM) + '/' + GetRandomNum(1,MAX_NUM);
-                }
             }
             var m = GetRandomNum(1, 4);
             if (m == 1) {
