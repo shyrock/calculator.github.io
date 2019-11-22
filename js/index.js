@@ -147,6 +147,8 @@ function createProblem () {
 		    } else {
 			return a[0] + Arr[n] + a[1] + Arr[n1] + "( " +  a[2] + Arr[n2] + a[3] + " )";
 		    }
+	    } else{
+		    return a[0] + Arr[n] + a[1] + Arr[n1] +  a[2] + Arr[n2] + a[3] ;
 	    }
         }
     }
