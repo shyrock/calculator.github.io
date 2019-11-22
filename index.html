@@ -8,6 +8,7 @@
     <link rel="stylesheet"  href="css/index.css"/>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/file.js"></script>
+    <script type="text/javascript" src="jquery.PrintArea.js"></script>
 </head>
 <body>
     <h1>自动生成四则运算</h1>
@@ -33,6 +34,7 @@
     
     
     <button type='button' onclick="start()">生成题目</button>
+    <button type='button' onclick="print_assignment()">打印题目</button>
     
     <button onClick="downFile('quesitons.txt', quesitonsArr)">导出题目txt文件</button>
     <button onClick="downFile('result.txt', answersArr)">导出答案txt文件</button>
@@ -40,7 +42,7 @@
     <button onClick="checkRight()">在线验证答案</button>
 
     <div class="box-container">
-        <div class="l-box">
+        <div class="l-box" id="assignment">
             <h4>题目：</h4>
             <ul id="text"></ul>
         </div>
@@ -160,6 +162,9 @@
         document.getElementById("text2").innerHTML=answersHtmlArr;
     }
 
+    function print_assignment() {
+        $('assignment').printArea();
+    }
 
     // 生成下载文件
     function downFile(name, content) {
