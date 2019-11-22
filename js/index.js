@@ -97,7 +97,7 @@ function createFenshu () {
 // 问题生成器
 function createProblem () {
     // 定义一个操作符数组
-    var Arr = [" + ", " - ", " * ", " ÷ "]; 
+    var Arr = [" + ", " - ", " x ", " ÷ "]; 
 
     // 随机数来决定操作符
     var n = GetRandomNum(0,3);
