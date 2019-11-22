@@ -104,9 +104,9 @@ function createProblem () {
     }    
 
     // 随机数来决定操作符
-    var n = GetRandomNum(0,len(Arr)-1);
-    var n1 = GetRandomNum(0,len(Arr)-1);
-    var n2 = GetRandomNum(0,len(Arr)-1);
+    var n = GetRandomNum(0,length(Arr)-1);
+    var n1 = GetRandomNum(0,length(Arr)-1);
+    var n2 = GetRandomNum(0,length(Arr)-1);
 
     // 随机数来决定操作符的数目 <=3
     var m = GetRandomNum(1,3);
