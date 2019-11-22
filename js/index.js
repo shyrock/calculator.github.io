@@ -136,7 +136,7 @@ function createProblem () {
             for(var i = 0; i < 4; i++) {
                     a[i] = GetRandomNum(1,MAX_NUM);
             }
-	    if (parentheses){
+	    if (PARENTHESES){
 		    var m = GetRandomNum(1, 4);
 		    if (m == 1) {
 			return "( " + a[0] + Arr[n] + a[1] + " )" + Arr[n1] + "( " + a[2] + Arr[n2] + a[3] + " )";
