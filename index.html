@@ -108,6 +108,7 @@
 
         var problemNum = document.getElementById("problemNum").value;
         var round = document.getElementById("round").value;
+        let division = document.getElementById("division").value;
         
         if (problemNum <= 0 || round <= 0) {
             alert('请输入正确的题目数及范围！！');
@@ -115,6 +116,7 @@
         }
 
         MAX_NUM = Number(round);
+        DIVISION = Boolean(division);
 
         var quesitons;
         var answers;
