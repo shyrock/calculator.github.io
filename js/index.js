@@ -100,9 +100,9 @@ function createProblem () {
     var Arr = [" + ", " - ", " x ", " ÷ "]; //
 
     // 随机数来决定操作符
-    var n = GetRandomNum(0,3);
-    var n1 = GetRandomNum(0,3);
-    var n2 = GetRandomNum(0,3);
+    var n = GetRandomNum(0,2);
+    var n1 = GetRandomNum(0,2);
+    var n2 = GetRandomNum(0,2);
 
     // 随机数来决定操作符的数目 <=3
     var m = GetRandomNum(1,3);
