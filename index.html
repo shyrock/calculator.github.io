@@ -25,6 +25,10 @@
     <div class="input-box">
         <label for="division">除法</label>
         <input type="checkbox" id="division" class="inputItem" placeholder="除法" /> 
+    </div> 
+    <div class="input-box">
+        <label for="parentheses">括号</label>
+        <input type="checkbox" id="parentheses" class="inputItem" placeholder="括号" /> 
     </div>
     
     
@@ -109,6 +113,7 @@
         var problemNum = document.getElementById("problemNum").value;
         var round = document.getElementById("round").value;
         var division = document.getElementById("division").checked;
+        let parentheses = document.getElementById("parentheses").checked;
         
         if (problemNum <= 0 || round <= 0) {
             alert('请输入正确的题目数及范围！！');
@@ -117,6 +122,7 @@
 
         MAX_NUM = Number(round);
         DIVISION = Boolean(division);
+        PARENTHESES = Boolean(parentheses);
 
         var quesitons;
         var answers;
