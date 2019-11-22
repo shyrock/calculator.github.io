@@ -97,12 +97,16 @@ function createFenshu () {
 // 问题生成器
 function createProblem () {
     // 定义一个操作符数组
-    var Arr = [" + ", " - ", " x ", " ÷ "]; //
+    if (DIVISION){
+    	var Arr = [" + ", " - ", " x ", " ÷ "]; //
+    }else{
+    	var Arr = [" + ", " - ", " x "]; //
+    }    
 
     // 随机数来决定操作符
-    var n = GetRandomNum(0,2);
-    var n1 = GetRandomNum(0,2);
-    var n2 = GetRandomNum(0,2);
+    var n = GetRandomNum(0,len(Arr)-1);
+    var n1 = GetRandomNum(0,len(Arr)-1);
+    var n2 = GetRandomNum(0,len(Arr)-1);
 
     // 随机数来决定操作符的数目 <=3
     var m = GetRandomNum(1,3);
