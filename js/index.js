@@ -124,12 +124,16 @@ function createProblem () {
             for(var i = 0; i < 3; i++) {
                     a[i] = GetRandomNum(1,MAX_NUM);
             }
-            var m = GetRandomNum(1, 2);
-            if (m == 1) {
-                return "( " + a[0] + Arr[n] + a[1] + " )" + Arr[n1] + a[2];
-            } else {
-                return a[0] + Arr[n] + "( " +  a[1] + Arr[n1] + a[2] + " )";
-            }
+	    if (PARENTHESES){
+		    var m = GetRandomNum(1, 2);
+		    if (m == 1) {
+			return "( " + a[0] + Arr[n] + a[1] + " )" + Arr[n1] + a[2];
+		    } else {
+			return a[0] + Arr[n] + "( " +  a[1] + Arr[n1] + a[2] + " )";
+		    }
+	    } else{
+		    return a[0] + Arr[n] + a[1] + Arr[n1] + a[2];
+	    }
         }
         case 3:{
             var a = [];
